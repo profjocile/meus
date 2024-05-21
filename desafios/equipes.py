@@ -2,36 +2,26 @@
 Faça um algoritmo para cadastrar os alunos que estão se canditando para equipes de desenvolvimento
 '''
 
+# Monte 4 equipes de alunos
 equipe1 = []
 equipe2 = []
 equipe3 = []
 equipe4 = []
 
-lista = 0
-while lista<10:
-  nome = (input('Entre com o nome para a equipe 1, ou s pra sair: '))
-  if nome == 's': break
-  lista = lista + 1
-  equipe1.append(nome)
+# Lista de nomes de alunos
 
-while lista<10:
-  nome = (input('Entre com o nome para a equipe 2, ou s pra sair: '))
-  if nome == 's': break
-  lista = lista + 1
-  equipe2.append(nome)
+nomes = set (['Caio','Davi', 'Edmilson', 'Erick', 'Esmael', 'Alison', 'Expedito', 'Armando', 'Kauã', 'Marcos', 'Graziel', 'Raiane', 'Natanael', 'Gabriel', 'Pedro', 'Silas'])
 
-while lista<10:
-  nome = (input('Entre com o nome para a equipe 3, ou s pra sair: '))
-  if nome == 's': break
-  lista = lista + 1
-  equipe3.append(nome)
+for i in range(4):
+    equipe1.append(nomes.pop())
+    equipe2.append(nomes.pop())
+    equipe3.append(nomes.pop())
+    equipe4.append(nomes.pop())
 
-while lista<10:
-  nome = (input('Entre com o nome para a equipe 4, ou s pra sair: '))
-  if nome == 's': break
-  lista = lista + 1
-  equipe4.append(nome)
-
-# Desafio:
 # Mostre os nomes por cada equipe
-# Mostre os nomes que se repetem em outras equipes
+print(f'''
+      Equipe 1: {equipe1}\n
+      Equipe 2: {equipe2}\n
+      Equipe 3: {equipe3}\n
+      Equipe 4: {equipe4}\n
+      ''')
